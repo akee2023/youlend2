@@ -47,7 +47,7 @@ resource "aws_lambda_function" "feature_set1b" {
   handler       = "FeatureSet1B.lambda_endpoint"
   
 
-  #source_code_hash = filebase64sha256("local.fset1b_zip_location")
+  source_code_hash = filebase64sha256("local.fset1b_zip_location")
 
   layers = [aws_lambda_layer_version.Utils.arn, var.pandas_arn]
   
@@ -77,7 +77,7 @@ resource "aws_lambda_function" "feature_set2a" {
   handler       = "FeatureSet2A.lambda_endpoint"
   
 
-  #source_code_hash = filebase64sha256("local.fset2a_zip_location")
+  source_code_hash = filebase64sha256("local.fset2a_zip_location")
 
   layers = [aws_lambda_layer_version.Utils.arn, var.pandas_arn]
   
